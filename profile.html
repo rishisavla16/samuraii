@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAMURAIi — Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="index.html" class="site-logo" aria-label="SAMURAIi home">
+          <img src="for%20dark%20bgs.png" alt="SAMURAIi" />
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" data-nav-panel>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="profile.html" class="nav-icon is-active" aria-label="Profile">
+            <img src="assets/icons/profile.svg" alt="" width="22" height="22" />
+          </a>
+          <a href="cart.html" class="nav-icon cart-link" aria-label="Cart">
+            <img src="assets/icons/cart.svg" alt="" width="22" height="22" />
+            <span class="cart-link__count" data-cart-count hidden>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page reveal">
+      <div class="container">
+        <header class="page-header">
+          <h1>Profile</h1>
+          <p>Your account</p>
+        </header>
+
+        <div class="profile-layout">
+          <aside class="profile-card reveal">
+            <div class="profile-avatar" data-profile-avatar aria-hidden="true">S</div>
+            <h2 class="profile-card__name" data-profile-display-name>Guest</h2>
+            <p class="profile-card__email" data-profile-display-email>Sign in to save your details</p>
+            <a href="cart.html" class="btn btn--ghost btn--small profile-card__link">View cart</a>
+          </aside>
+
+          <div class="profile-main">
+            <section class="profile-panel reveal">
+              <h3>Account details</h3>
+              <form class="profile-form" data-profile-form novalidate>
+                <label>
+                  Full name
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Your name"
+                    data-profile-name
+                  />
+                </label>
+                <label>
+                  Email
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="you@email.com"
+                    data-profile-email
+                  />
+                </label>
+                <label>
+                  Phone
+                  <input
+                    type="tel"
+                    name="phone"
+                    autocomplete="tel"
+                    placeholder="+91 ..."
+                    data-profile-phone
+                  />
+                </label>
+                <button type="submit" class="btn btn--solid">Save profile</button>
+                <p class="form-notice" data-profile-notice hidden></p>
+              </form>
+            </section>
+
+            <section class="profile-panel reveal">
+              <h3>Orders</h3>
+              <p class="profile-empty" data-profile-orders-empty>
+                No orders yet. When checkout goes live, your history will show here.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; 2026 SAMURAIi</p>
+        <div class="site-footer__links">
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

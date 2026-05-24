@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAMURAIi — Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="index.html" class="site-logo" aria-label="SAMURAIi home">
+          <img src="for%20dark%20bgs.png" alt="SAMURAIi" />
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" data-nav-panel>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="is-active">Contact</a>
+          <a href="profile.html" class="nav-icon" aria-label="Profile">
+            <img src="assets/icons/profile.svg" alt="" width="22" height="22" />
+          </a>
+          <a href="cart.html" class="nav-icon cart-link" aria-label="Cart">
+            <img src="assets/icons/cart.svg" alt="" width="22" height="22" />
+            <span class="cart-link__count" data-cart-count hidden>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page reveal">
+      <div class="container">
+        <header class="page-header">
+          <h1>Contact us</h1>
+          <p>Questions, collabs, or custom orders — reach out.</p>
+        </header>
+
+        <div class="contact-links">
+          <a href="mailto:hello@samuraii.com">hello@samuraii.com</a>
+          <a href="https://www.instagram.com/samuraii.india/" target="_blank" rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-map reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609817257!2d72.74109894936541!3d19.08219783958241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648caf!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716566400000!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="SAMURAIi location on Google Maps"
+            ></iframe>
+          </div>
+
+          <form class="contact-form reveal" data-contact-form novalidate>
+            <label>
+              Name
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="btn btn--solid">Send message</button>
+            <p class="form-notice" data-form-notice hidden></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; 2026 SAMURAIi</p>
+        <div class="site-footer__links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
