@@ -14,8 +14,21 @@ function isInternalPageLink(link) {
   }
 
   try {
-    const url = new URL(link.href, window.location.href);
-    if (url.origin !== window.location.origin) return false;
+    const href = link.href || "";
+    const currentPath = window.location.href;
+    
+    // Handle file:// protocol and relative URLs
+    if (currentPath.startsWith("file://")) {
+      // For file protocol, check if href is relative or same-origin
+      if (href.startsWith("http") || href.startsWith("https")) return false;
+      if (href.startsWith("#")) return false;
+      // Allow relative URLs and same-directory URLs
+      return /\.html$/i.test(href) || href.includes(".html");
+    }
+    
+    // Standard handling for http/https
+    const url = new URL(href, currentPath);
+    if (url.origin !== new URL(currentPath).origin) return false;
     return /\.html$/i.test(url.pathname) || url.pathname.endsWith("/");
   } catch {
     return false;

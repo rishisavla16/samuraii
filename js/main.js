@@ -260,4 +260,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof observeReveals === "function") {
     observeReveals();
   }
+
+  if (typeof initPageTransitions === "function") {
+    initPageTransitions();
+  }
+
+  if (typeof initPageEnter === "function") {
+    initPageEnter();
+  }
 });
