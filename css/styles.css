@@ -1583,16 +1583,7 @@ main.reveal {
     pointer-events: auto;
   }
 
-  .site-nav a {
-    font-size: 0.9rem;
-    padding: 0.9rem 1.25rem;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    color: #1f1f1f;
-    text-align: left;
-  }
-
+  .site-nav > a,
   .site-nav .nav-link {
     font-size: 0.9rem;
     padding: 0.9rem 1.25rem;
@@ -1603,8 +1594,10 @@ main.reveal {
     text-align: left;
   }
 
-  .site-nav a:hover,
-  .site-nav a.is-active {
+  .site-nav > a:hover,
+  .site-nav > a.is-active,
+  .site-nav .nav-link:hover,
+  .site-nav .nav-link.is-active {
     background-color: rgba(162, 23, 26, 0.08);
   }
 
