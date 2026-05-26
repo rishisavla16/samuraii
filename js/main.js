@@ -134,7 +134,7 @@ function renderProductPage() {
     </nav>
     <div class="product-detail__layout">
       <div class="product-detail__media">
-        <img src="${encodeImagePath(product.image)}" alt="${product.name}" />
+        <img src="${encodeImagePath(product.image)}" alt="${product.name}" loading="lazy" />
       </div>
       <section class="product-detail__info" aria-labelledby="product-title">
         <p class="product-detail__category">${categoryLabel}</p>
@@ -414,7 +414,7 @@ function initCartPage() {
       row.className = "cart-item";
       row.innerHTML = `
         <div class="cart-item__media">
-          <img src="${encodeImagePath(item.image)}" alt="${item.name}" />
+          <img src="${encodeImagePath(item.image)}" alt="${item.name}" loading="lazy" />
         </div>
         <div class="cart-item__details">
           <h3>${item.name}</h3>

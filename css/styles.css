@@ -5,7 +5,7 @@
   --offwhite:#fff0f0;
   --gold: #b58426;
   --muted: rgba(33, 33, 33, 0.68);
-  --border: rgba(139, 31, 36, 0.18);
+  --border: rgba(140, 140, 140, 0.18);
   --font: "DM Sans", system-ui, -apple-system, sans-serif;
   --max: 1200px;
   --header-h: 72px;
@@ -71,6 +71,11 @@ textarea {
   background: rgba(246, 246, 246, 0.92);
   backdrop-filter: blur(2px);
   border-bottom: 1px solid var(--border);
+}
+
+hr{
+    border: 1px solid var(--border);
+
 }
 
 .site-header__inner {
@@ -671,7 +676,7 @@ main.reveal {
 .category-card {
   display: block;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: none;
   transition:
     border-color 0.3s var(--ease),
     transform 0.3s var(--ease);
@@ -734,7 +739,7 @@ main.reveal {
   overflow: hidden;
   aspect-ratio: 4 / 5;
   background: var(--red-deep);
-  border: 1px solid var(--border);
+  border: none;
   position: relative;
 }
 
@@ -860,7 +865,7 @@ main.reveal {
 }
 
 .product-detail__media {
-  border: 1px solid var(--border);
+  border: none;
   background: #f6f6f6;
   aspect-ratio: 4 / 5;
   overflow: hidden;
@@ -1040,7 +1045,7 @@ main.reveal {
 }
 
 .about-split__media {
-  border: 1px solid var(--border);
+  border: none;
   overflow: hidden;
   background: var(--red-deep);
 }
@@ -1200,7 +1205,7 @@ main.reveal {
 }
 
 .contact-map {
-  border: 1px solid var(--border);
+  border: none;
   overflow: hidden;
   min-height: 320px;
   background: var(--red-deep);
@@ -1278,7 +1283,7 @@ main.reveal {
 .cart-item__media {
   overflow: hidden;
   aspect-ratio: 1;
-  border: 1px solid var(--border);
+  border: none;
 }
 
 .cart-item__media img {
@@ -1564,7 +1569,6 @@ main.reveal {
     transition:
       transform 0.35s var(--ease),
       opacity 0.35s var(--ease);
-    border-top: 1px solid var(--border);
     z-index: 101;
     width: 100%;
     height: calc(100vh - var(--header-h));
@@ -1619,6 +1623,10 @@ main.reveal {
   .nav-item--dropdown {
     width: 100%;
     display: block;
+  }
+
+  .nav-item--dropdown > .nav-link::after {
+    display: none;
   }
 
   .nav-dropdown {
