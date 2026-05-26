@@ -35,30 +35,8 @@ function isInternalPageLink(link) {
   }
 }
 
-function initPageTransitions() {
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("a");
-    if (!link || !isInternalPageLink(link)) return;
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-
-    event.preventDefault();
-    const href = link.href;
-
-    if (prefersReducedMotion()) {
-      window.location.href = href;
-      return;
-    }
-
-    document.body.classList.add("is-leaving");
-    window.setTimeout(() => {
-      window.location.href = href;
-    }, 380);
-  });
-}
-
 function initPageEnter() {
   const reveal = () => {
-    document.body.classList.remove("is-leaving");
     document.body.classList.add("is-ready");
   };
 
@@ -146,7 +124,9 @@ function initInteractivePress() {
     "mousedown",
     (event) => {
       const target = event.target.closest(".product-card__media, .category-card");
-      if (target) target.classList.add("is-pressed");
+      if (target && !event.target.closest(".favorite-btn")) {
+        target.classList.add("is-pressed");
+      }
     },
     true
   );
@@ -179,7 +159,6 @@ function initAddToCartPulse() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initPageEnter();
-  initPageTransitions();
   initScrollReveal();
   initInteractivePress();
   initAddToCartPulse();

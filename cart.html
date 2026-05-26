@@ -16,29 +16,47 @@
     <header class="site-header">
       <div class="site-header__inner">
         <a href="index.html" class="site-logo" aria-label="SAMURAIi home">
-          <img src="for%20dark%20bgs.png" alt="SAMURAIi" />
+          <img src="for%20light%20bgs.png" alt="SAMURAIi" />
         </a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          data-nav-toggle
-        >
-          <span></span><span></span><span></span>
-        </button>
+        <div class="header-right">
         <nav class="site-nav" data-nav-panel>
-          <a href="shop.html">Shop</a>
-          <a href="about.html">About</a>
+          <div class="nav-item nav-item--dropdown">
+            <a href="shop.html" class="nav-link">Shop</a>
+            <div class="nav-dropdown" aria-label="Shop categories">
+              <a href="chains.html">Chains</a>
+              <a href="bracelets.html">Bracelets</a>
+              <a href="earrings.html">Earrings</a>
+              <a href="rings.html">Rings</a>
+              <a href="bandanas.html">Bandanas</a>
+              <a href="tote.html">Tote</a>
+            </div>
+          </div>
+          <a href="ourstory.html">Our Story</a>
           <a href="contact.html">Contact</a>
+          <a href="favorites.html" class="nav-icon" aria-label="Favorites">
+            <img src="assets/icons/heart.svg" alt="" width="22" height="22" />
+          </a>
           <a href="profile.html" class="nav-icon" aria-label="Profile">
             <img src="assets/icons/profile.svg" alt="" width="22" height="22" />
           </a>
+
+        </nav>
+        <div class="header-actions">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <span></span><span></span><span></span>
+          </button>
           <a href="cart.html" class="nav-icon cart-link is-active" aria-label="Cart">
             <img src="assets/icons/cart.svg" alt="" width="22" height="22" />
             <span class="cart-link__count" data-cart-count hidden>0</span>
           </a>
-        </nav>
+        </div>
+        </div>
       </div>
     </header>
 
@@ -71,11 +89,54 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container site-footer__inner">
-        <p>&copy; 2026 SAMURAIi</p>
-        <div class="site-footer__links">
-          <a href="shop.html">Shop</a>
-          <a href="contact.html">Contact</a>
+      <div class="container site-footer__grid">
+        <div class="site-footer__col site-footer__socials">
+          <p class="site-footer__eyebrow">Connect</p>
+          <ul class="site-footer__icon-list" aria-label="Social media">
+            <li>
+              <a
+                href="https://www.instagram.com/samuraii.india/"
+                class="site-footer__icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img src="assets/icons/social/instagram.svg" alt="" width="20" height="20" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="site-footer__icon" aria-label="Email">
+                <img src="assets/icons/social/email.svg" alt="" width="20" height="20" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="site-footer__icon"
+                aria-label="WhatsApp"
+              >
+                <img src="assets/icons/social/whatsapp.svg" alt="" width="20" height="20" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col site-footer__location">
+          <p class="site-footer__eyebrow">Location</p>
+          <address class="site-footer__address">
+            <span>Mumbai, Maharashtra</span>
+            <span>India</span>
+          </address>
+          <a class="site-footer__email" href="#">hello@samuraii.com</a>
+        </div>
+
+        <div class="site-footer__col site-footer__legal">
+          <nav class="site-footer__legal-links" aria-label="Legal">
+            <a href="faq.html">FAQs</a>
+            <a href="terms.html">Terms</a>
+            <a href="refunds.html">Refunds</a>
+            <a href="cancellations.html">Cancellations</a>
+          </nav>
         </div>
       </div>
     </footer>

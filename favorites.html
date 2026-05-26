@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAMURAIi — Home</title>
+    <title>SAMURAIi — Favorites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +33,7 @@
           </div>
           <a href="ourstory.html">Our Story</a>
           <a href="contact.html">Contact</a>
-          <a href="favorites.html" class="nav-icon" aria-label="Favorites">
+          <a href="favorites.html" class="nav-icon is-active" aria-label="Favorites">
             <img src="assets/icons/heart.svg" alt="" width="22" height="22" />
           </a>
           <a href="profile.html" class="nav-icon" aria-label="Profile">
@@ -60,24 +60,20 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero__logo">
-          <img src="hero.jpg" alt="SAMURAIi" width="1920" height="1080" />
-        </div>
-        <div class="hero__cta">
-          <a href="shop.html" class="btn btn--solid">Shop</a>
-        </div>
-        <p class="hero__tagline">Sharp Mindset, Sharper Legacy</p>
-      </section>
+    <main class="page reveal">
+      <div class="container">
+        <header class="page-header">
+          <h1>Favorites</h1>
+          <p>Save the pieces you love and come back anytime.</p>
+        </header>
 
-      <section class="featured shop-categories reveal">
-        <div class="container">
-          <div class="featured__header">            
-          </div>
-          <div class="category-grid" data-category-grid></div>
+        <div class="favorites-empty" data-favorites-empty>
+          <p>No favorites yet.</p>
+          <a href="shop.html" class="btn">Browse all products</a>
         </div>
-      </section>
+
+        <div class="product-grid" data-favorites-grid></div>
+      </div>
     </main>
 
     <footer class="site-footer">

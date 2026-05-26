@@ -167,10 +167,10 @@ const CATEGORIES = [
 
 /** Home page category tiles — uses plural .jpg in folder when present */
 const SHOP_CATEGORIES = [
-  { id: "chains", label: "Chains", image: "chains/chains.jpg" },
-  { id: "bracelets", label: "Bracelets", image: "bracelets/bracelets.jpg" },
-  { id: "earrings", label: "Earrings", image: "earrings/earrings.jpg" },
-  { id: "rings", label: "Rings", image: "rings/rings.jpg" },
+  { id: "chains", label: "Chains", image: "chains/chain (1).jpg" },
+  { id: "bracelets", label: "Bracelets", image: "bracelets/bracelet (1).jpg" },
+  { id: "earrings", label: "Earrings", image: "earrings/earring (2).jpg" },
+  { id: "rings", label: "Rings", image: "rings/ring (1).jpg" },
   { id: "bandanas", label: "Bandanas", image: "bandanas/bandana1.jpg" },
   { id: "tote", label: "Tote", image: "tote/tote1.jpg" },
 ];

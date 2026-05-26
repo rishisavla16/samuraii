@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAMURAIi — Home</title>
+    <title>SAMURAIi — Bandanas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +21,7 @@
         <div class="header-right">
         <nav class="site-nav" data-nav-panel>
           <div class="nav-item nav-item--dropdown">
-            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="shop.html" class="nav-link is-active">Shop</a>
             <div class="nav-dropdown" aria-label="Shop categories">
               <a href="chains.html">Chains</a>
               <a href="bracelets.html">Bracelets</a>
@@ -60,24 +60,24 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero__logo">
-          <img src="hero.jpg" alt="SAMURAIi" width="1920" height="1080" />
-        </div>
-        <div class="hero__cta">
-          <a href="shop.html" class="btn btn--solid">Shop</a>
-        </div>
-        <p class="hero__tagline">Sharp Mindset, Sharper Legacy</p>
-      </section>
-
-      <section class="featured shop-categories reveal">
-        <div class="container">
-          <div class="featured__header">            
+    <main class="page reveal" data-category="bandanas">
+      <div class="container">
+        <header class="page-header">
+          <div class="page-header__row">
+            <h1>Shop</h1>
+            <select class="category-select" data-category-select aria-label="Category">
+              <option value="chains.html">Chains</option>
+              <option value="bracelets.html">Bracelets</option>
+              <option value="earrings.html">Earrings</option>
+              <option value="rings.html">Rings</option>
+              <option value="bandanas.html" selected>Bandanas</option>
+              <option value="tote.html">Tote</option>
+            </select>
           </div>
-          <div class="category-grid" data-category-grid></div>
-        </div>
-      </section>
+        </header>
+
+        <div class="product-grid" data-product-grid></div>
+      </div>
     </main>
 
     <footer class="site-footer">
